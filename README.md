@@ -41,6 +41,14 @@ Open:
 - API docs: http://127.0.0.1:8000/docs
 - Health: http://127.0.0.1:8000/api/v1/health
 
+## Published Container
+
+```bash
+docker pull ghcr.io/krishnabyf/rl-gym-fastapi-platform:0.1.0
+docker run --rm -p 8000:8000 \
+  ghcr.io/krishnabyf/rl-gym-fastapi-platform:0.1.0
+```
+
 ## Example Requests
 
 List environments:
@@ -95,4 +103,3 @@ See [docs/production.md](docs/production.md) for deployment, observability, pers
 ## How To Extend With Gymnasium
 
 See [docs/gymnasium-extension.md](docs/gymnasium-extension.md). The current implementation keeps the default environment lightweight and deterministic so the project can run anywhere, while the registry interface is ready for Gymnasium adapters.
-
